@@ -28,19 +28,21 @@ const createEvents = () => {
 }
 
 const sortPets = (e) => {
-    const house = e.target.id;
-    if(house === "All"){
+    const type = e.target.id;
+    if(type === "cat"){
+        petsBuilder(pets);
+    } else if(type === "dog"){
         petsBuilder(pets);
     } else{
-        const filteredPeeps = pets.filter(x => x.house === house);
-        petsBuilder(filteredPeeps);
+        const filteredPets = pets.filter(x => x.type === type);
+        petsBuilder(filteredPets);
     }
 }
 
 const sortEvents = () => {
-    const catButton = document.getElementById('Cat');
-    const dogButton = document.getElementById('Dog');
-    const dinoButton = document.getElementById('Dino');
+    const catButton = document.getElementById('cat');
+    const dogButton = document.getElementById('dog');
+    const dinoButton = document.getElementById('dino');
     catButton.addEventListener('click', sortPets);
     dogButton.addEventListener('click', sortPets);
     dinoButton.addEventListener('click', sortPets);
