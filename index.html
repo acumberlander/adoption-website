@@ -10,11 +10,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <div id="buttonDiv">
-        <button type="button" id="cat" class="btn btn-primary">Cat</button>
-        <button type="button" id="dog" class="btn btn-success">Dog</button>
-        <button type="button" id="dino" class="btn btn-danger">Dino</button>
+    <h1 class="text-center">Pet Adoption Website!</h1>
+    <div class="m-5 d-flex justify-content-center" id="buttonDiv">
+        <button type="button" id="cat" class="btn btn-primary mx-auto" style="width: 100px;">Cat</button>
+        <button type="button" id="dog" class="btn btn-success mx-auto" style="width: 100px;">Dog</button>
+        <button type="button" id="dino" class="btn btn-danger mx-auto" style="width: 100px;">Dino</button>
+    </div>
+    <div class="m-2 d-flex justify-content-center" id="buttonDiv">
+        <button type="button" id="all" class="btn btn-light mb-5 mt-2" style="width: 300px;">All</button>
     </div>
     <div id="pets"></div>
     <!-- bootstrap -->
@@ -24,7 +27,6 @@
     <!-- js links -->
     <script type="module" src="./javascripts/components/petComponents.js"></script>
     <script type="module" src="./javascripts/data/petData.js"></script>
-    <script type="module" src="./javascripts/events.js"></script>
     <script type="module" src="./javascripts/main.js"></script>
 </body>
 </html>
