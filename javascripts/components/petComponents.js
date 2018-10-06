@@ -58,21 +58,23 @@ const petsBuilder = (petsArray) => {
     let domString = "";
     petsArray.forEach((pet) => {
         // domString += `<div class="m" id="petContainer">`;
-        domString += `<div class= "col-4 pet-card" id="${pet.id}">`;
+        domString += `<div class= "col-4 pet-cards d-inline-block" id="${pet.id}">`;
         domString += `<div class="card m-2">`;
-        domString += `<div class= "pet-card card-header text-center">${pet.name}</div>`;
-        domString += `<img class="card-img-top" src="${pet.imageUrl}" alt="${pet.name}">`
-        domString += `<div class="card m-2 text-center">${pet.color}</div>`;
-        domString += `<div class="card m-2 text-center">${pet.specialSkill}</div>`;
-        domString += `<div class="card-body">`
+        domString += `<div class= "pet-cards card-header text-center">${pet.name}</div>`;
+        domString += `<img class=" m-5 text-center card-pics" src="${pet.imageUrl}" alt="${pet.name}">`
+        domString += `<p class="card m-2 text-center">${pet.color} </p>`;
+        domString += `<p class="card m-2 text-center">${pet.specialSkill}</p>`;
+        // domString += `<div class="card-body">`
         if (pet.type === 'cat') {
-            domString += `<h5 class="card-title text-center bg-primary">${pet.type}</h5>`
+            domString += `<div class="footer bg-primary">`
             } else if (pet.type === 'dog') {
-                domString += `<h5 class="card-title text-center bg-success">${pet.type}</h5>`
+                domString += `<div class="footer bg-success">`
                 } else {
-                domString += `<h5 class="card-title text-center bg-danger">${pet.type}</h5>`
+                domString += `<div class="footer bg-danger">`
                 }
+        domString += `<h5 class="card-title text-center" style="max-width">${pet.type}</h5>`
         // domString += `<h5 class="card-title text-center">${pet.type}</h5>`
+        domString += `</div>`;
         domString += `</div>`;
         domString += `</div>`;
         domString += `</div>`;
